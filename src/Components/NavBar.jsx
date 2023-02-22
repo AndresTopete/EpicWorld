@@ -5,32 +5,41 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
     Button,
-    ChevronDownIcon
+    Flex,
+    Box,
+    Spacer
   } from '@chakra-ui/react'
 
 
 const NavBar = () => {
   return (
     <div>
-        Tienda
-        <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            Productos
-        </MenuButton>
-        <MenuList>
-            <MenuItem>Nintendo</MenuItem>
-            <MenuItem>PlayStation</MenuItem>
-            <MenuItem>Xbox</MenuItem>
-        </MenuList>
-        </Menu>
-        <CardWidget/>
+       <Flex>
+            <Box p='4'>
+            Logo
+            </Box>
+            <Spacer />
+            <Box>
+                <Menu>
+                <MenuButton as={Button}>
+                    Productos
+                </MenuButton>
+                <MenuList>
+                    <MenuItem>Nintendo</MenuItem>
+                    <MenuItem>PlayStation</MenuItem>
+                    <MenuItem>Xbox</MenuItem>
+                </MenuList>
+                </Menu>
+            </Box>
+            <Box p='4'>
+            <CardWidget/>
+            </Box>
+        </Flex>
+        
     </div>
   )
 }
 
 export default NavBar
+
